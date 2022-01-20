@@ -42,7 +42,10 @@ public class FSMBase
 
     //状态机主人
     public GameObject FSMMaster { get; private set; }
-
+    /// <summary>
+    /// 创建状态机，传入状态机主人
+    /// </summary>
+    /// <param name="FSMMaster">状态机主人</param>
     public FSMBase(GameObject FSMMaster)//状态机初始化
     {
         this.FSMMaster = FSMMaster;

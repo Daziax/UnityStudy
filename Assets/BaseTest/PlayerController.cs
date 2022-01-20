@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     PlayerAudio playerAudio;
     PlayerAnimator playerAnimator;
     FSMBase playerFSM;
+    [SerializeField] LayerMask groundLayer;//可以被碰撞的层
     /// <summary>
     /// 初始化变量
     /// </summary>
@@ -18,10 +19,10 @@ public class PlayerController : MonoBehaviour
         playerInput = new PlayerInput();
         playerAudio = new PlayerAudio();
         playerAnimator = new PlayerAnimator();
-        
+
         playerFSM = new FSMBase(gameObject);
         playerFSM.SetDefaultState(new Player_Idle(playerFSM, PlayerState.Player_Idle));
-        
+
     }
 
     void Awake()
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         //StateBase state = (StateBase)Activator.CreateInstance(ty, new object[]{playerFSM,PlayerState.Player_Attack});
         //string name = PlayerState.Player_Attack.ToString();
-        
+
     }
     private void Update()
     {
