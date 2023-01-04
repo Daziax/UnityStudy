@@ -30,7 +30,7 @@ TextureImporter:
       213: -652710763336336142
     second: charactor_8
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -51,6 +51,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -89,6 +90,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -104,6 +106,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -310,90 +324,158 @@ TextureImporter:
     physicsShape: []
     bones:
     - name: root
+      guid: 
       position: {x: 442.14825, y: 487.0091, z: 0}
       rotation: {x: 0, y: 0, z: 0.7171332, w: 0.6969362}
       length: 53.5137
       parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: duzi
+      guid: 
       position: {x: 53.513695, y: -0.000003988056, z: 0}
       rotation: {x: 0, y: 0, z: -0.014281706, w: 0.999898}
       length: 99.34294
       parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_thigh
+      guid: 
       position: {x: -64.38286, y: 47.70874, z: 1}
       rotation: {x: 0, y: -0, z: 0.9996573, w: 0.026181642}
       length: 64.20887
       parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_calf
+      guid: 
       position: {x: 102.37045, y: 2.437439, z: 2}
       rotation: {x: 0, y: 0, z: 0.011901699, w: 0.9999292}
       length: 53.49223
       parentId: 2
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_thigh
+      guid: 
       position: {x: -63.11703, y: -68.52948, z: 0}
       rotation: {x: 0, y: -0, z: -0.9999548, w: 0.0095089}
       length: 64.26344
       parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_calf
+      guid: 
       position: {x: 104.17367, y: 2.6898613, z: 1}
       rotation: {x: 0, y: 0, z: -0.023788372, w: 0.99971706}
       length: 51.96392
       parentId: 4
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: bone_7
+      guid: 
       position: {x: 61.13374, y: -0.000067237175, z: 0}
       rotation: {x: 0, y: 0, z: -0.00000016871212, w: 1}
       length: 35.15204
       parentId: 7
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: xiong
+      guid: 
       position: {x: 99.34297, y: -0.0000043255977, z: 0}
       rotation: {x: 0, y: 0, z: -0.000000005747308, w: 1}
       length: 61.13378
       parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_upperarm
+      guid: 
       position: {x: -27.599419, y: 172.71678, z: 1}
       rotation: {x: 0, y: -0, z: 0.9856656, w: 0.16871075}
       length: 97.141594
       parentId: 6
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_forearm
+      guid: 
       position: {x: 248.39476, y: -1.5203924, z: 2}
       rotation: {x: 0, y: 0, z: 0.56435466, w: 0.82553244}
       length: 86.69944
       parentId: 8
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_shouwan
+      guid: 
       position: {x: 86.69943, y: 0.000019485567, z: 2}
       rotation: {x: 0, y: 0, z: 0.06108446, w: 0.9981326}
       length: 43.321033
       parentId: 9
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: right_hand
+      guid: 
       position: {x: 43.32103, y: -0.000025969735, z: 2}
       rotation: {x: 0, y: 0, z: 0.66848993, w: 0.74372125}
       length: 33.392345
       parentId: 10
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_uperarm
+      guid: 
       position: {x: 35.727192, y: -191.30579, z: -2}
       rotation: {x: 0, y: -0, z: -0.9992116, w: 0.039701834}
       length: 109.43242
       parentId: 6
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_forearm
+      guid: 
       position: {x: 221.94745, y: 22.365437, z: -1}
       rotation: {x: 0, y: 0, z: 0.5608802, w: 0.827897}
       length: 105.932014
       parentId: 12
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_hand
+      guid: 
       position: {x: 105.93202, y: -0.000023895527, z: -1}
       rotation: {x: 0, y: 0, z: 0.7365514, w: 0.6763816}
       length: 46.68316
       parentId: 13
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: head
+      guid: 
       position: {x: 81.331856, y: -1.760738, z: 2}
       rotation: {x: 0, y: 0, z: 0.0038756125, w: 0.9999925}
       length: 183.84988
       parentId: 6
+      color:
+        serializedVersion: 2
+        rgba: 0
     - name: left_hand_8
+      guid: 
       position: {x: 147.07086, y: -90.62162, z: -1}
       rotation: {x: 0, y: 0, z: -0.040448956, w: 0.9991816}
       length: 153.07082
       parentId: 14
+      color:
+        serializedVersion: 2
+        rgba: 0
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices:
@@ -2897,6 +2979,16 @@ TextureImporter:
       boneIndex[2]: 0
       boneIndex[3]: 0
     secondaryTextures: []
+    nameFileIdTable:
+      charactor_4: -6198707184252021185
+      charactor_6: -8528496477758599126
+      charactor_2: -7301340879728980178
+      charactor_3: -3632974834895560926
+      charactor_7: 7725332155055834616
+      charactor_0: 7734248183326508550
+      charactor_5: 3214879356839328183
+      charactor_1: -988686525445262382
+      charactor_8: -652710763336336142
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
