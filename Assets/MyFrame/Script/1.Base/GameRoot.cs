@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class GameRoot : SingletonMono<GameRoot>
 {
@@ -35,7 +36,6 @@ public class GameRoot : SingletonMono<GameRoot>
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
 

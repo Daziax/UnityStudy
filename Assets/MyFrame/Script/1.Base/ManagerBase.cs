@@ -6,10 +6,10 @@ public interface IManagerBase
 {
     void Init();
 }
-public class ManagerBase<T> : MonoBehaviour,IManagerBase where T :ManagerBase<T>
+public class ManagerBase<T> : MonoBehaviour, IManagerBase where T : ManagerBase<T>
 {
-    public T Instance { get; set; }
-    public void Init()
+    public static T Instance { get; private set; }
+    public virtual void Init()
     {
         Instance = this as T;
     }

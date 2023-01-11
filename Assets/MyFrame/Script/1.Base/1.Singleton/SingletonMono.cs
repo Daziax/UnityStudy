@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
 {
-    public static T Instance{get;set;}
+    public static T Instance{get;private set;}
     protected virtual void Awake()
     {
-        Instance = this as T;
+        if(Instance==null)
+            Instance = this as T;
+
     }
 
 }
