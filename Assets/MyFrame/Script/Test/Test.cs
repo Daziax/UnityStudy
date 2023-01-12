@@ -11,6 +11,9 @@ public class Test:MonoBehaviour
     Dictionary<string, List<string>> dic;
     TestPool testPool;
     Queue<TestPool> gotObjects;
+    [SerializeField]
+    ConfigManager configManager;
+    [SerializeField]
     private void Awake()
     {
         //objectPool = new ObjectPool(new List<string>());
@@ -23,6 +26,9 @@ public class Test:MonoBehaviour
         gotObjects.Enqueue(new TestPool());
         gotObjects.Enqueue(new TestPool());
         gotObjects.Enqueue(new TestPool());
+        Debug.Log(configManager.GetConfig(ConfigType.武器).Name);
+  
+
     }
     private void Update()
     {

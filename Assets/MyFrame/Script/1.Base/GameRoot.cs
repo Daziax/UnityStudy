@@ -14,18 +14,18 @@ public class GameRoot : SingletonMono<GameRoot>
         }
         base.Awake();
         DontDestroyOnLoad(gameObject);
-        InitManagers();
+        //InitManagers();
     }
     /// <summary>
     /// 初始化所有管理器
     /// </summary>
     private void InitManagers()
     {
-        IManagerBase[] managers = GetComponents<IManagerBase>();
-        foreach(IManagerBase manager in managers)
-        {
-            manager.Init();
-        }
+        //IManagerBase[] managers = GetComponents<IManagerBase>();
+        //foreach(IManagerBase manager in managers)
+        //{
+            //manager.Init();
+        //}
     }
     // Start is called before the first frame update
     void Start()

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolManager : ManagerBase<PoolManager>
+public class PoolManager : Singleton<PoolManager>
 {
     Dictionary<string, GameObjectPool> GOPools;
     Dictionary<string, ObjectPool> objectPools;
-    public override void Init()
+    public PoolManager()
     {
-        base.Init();
+        //base.Init();
         GOPools = new Dictionary<string, GameObjectPool>();
         objectPools = new Dictionary<string, ObjectPool>();
     }
@@ -62,7 +62,6 @@ public class PoolManager : ManagerBase<PoolManager>
     /// <returns></returns>
     public object GetObject<T>() where T : class, new()
     {
-        Debug.Log(typeof(T).FullName);
         T obj;
         if (objectPools.ContainsKey(typeof(T).FullName) && objectPools[typeof(T).FullName].objectPool.Count > 0)
              obj= objectPools[typeof(T).FullName].DePool() as T;
@@ -79,7 +78,9 @@ public class PoolManager : ManagerBase<PoolManager>
     public void StoreObject(object obj)
     {
         if (objectPools.ContainsKey(obj.GetType().FullName))
+        {
             objectPools[obj.GetType().FullName].EnPool(obj);
+        }
         else
             objectPools.Add(obj.GetType().FullName, new ObjectPool(obj));
     }
@@ -127,6 +128,8 @@ public class PoolManager : ManagerBase<PoolManager>
             GOPools.Remove(typeof(T).FullName);
         }
     }
+
+    //todo 测试用，测试完删除
     public int GetDicCount
     {
         get => objectPools["TestPool"].objectPool.Count;

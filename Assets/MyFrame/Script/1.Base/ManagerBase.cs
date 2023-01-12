@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IManagerBase
+
+public class ManagerBase<T>  where T : ManagerBase<T>,new() //IManagerBase
 {
-    void Init();
-}
-public class ManagerBase<T> : MonoBehaviour, IManagerBase where T : ManagerBase<T>
-{
-    public static T Instance { get; private set; }
-    public virtual void Init()
+    static T instance;
+    public static T Instance
     {
-        Instance = this as T;
+        get
+        {
+            if (instance == null)
+              return instance=new T(); 
+            return instance;
+        }
     }
+    /*public virtual void Init()
+    {
+        //Instance = this as T;
+    }*/
 }
 //public class ManagerBase : MonoBehaviour
 //{
