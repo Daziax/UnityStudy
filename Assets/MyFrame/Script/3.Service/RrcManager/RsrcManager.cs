@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class SrcManager:Singleton<SrcManager>
+public class RsrcManager:Singleton<RsrcManager>
 {
     Type[] needPools;
-    public SrcManager()
+    public RsrcManager()
     {
-        needPools = new Type[15];
+        needPools = new Type[1] {typeof(TestPool)};
     }
     public bool IsNeedPool(Type type)
     {

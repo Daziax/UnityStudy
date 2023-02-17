@@ -23,9 +23,9 @@ public class Test:MonoBehaviour
         testPool = new TestPool();
         gotObjects = new Queue<TestPool>();
         gotObjects.Enqueue(testPool);
-        gotObjects.Enqueue(new TestPool());
-        gotObjects.Enqueue(new TestPool());
-        gotObjects.Enqueue(new TestPool());
+        gotObjects.Enqueue(RsrcManager.Instance.New<TestPool>());
+        gotObjects.Enqueue(RsrcManager.Instance.New<TestPool>());
+        gotObjects.Enqueue(RsrcManager.Instance.New<TestPool>());
         Debug.Log(configManager.GetConfig(ConfigType.武器).Name);
   
 
